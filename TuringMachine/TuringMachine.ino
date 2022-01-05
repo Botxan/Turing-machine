@@ -1,7 +1,7 @@
-#define MAX_TRANSITIONS 60 // limited dude lack of dynamic memory
-#define MAX_ALPHABET_SYMBOLS 30 // limited dude lack of dynamic memory
-#define TAPE_LENGTH 128 // limited dude lack of dynamic memory
-#define MAX_MACHINES 10 // limited dude lack of dynamic memory
+#define MAX_TRANSITIONS 100
+#define MAX_ALPHABET_SYMBOLS 30
+#define TAPE_LENGTH 128
+#define MAX_MACHINES 30
 
 // States
 #define START -1
@@ -426,7 +426,7 @@ void run() {
     boolean foundNextState = false;
     int i = 0;
     // loop until next state is found or there is no next state
-    while (!foundNextState && i < machine.transition_table.1size) {
+    while (!foundNextState && i < machine.transition_table.size) {
         transition transition = machine.transition_table.transitions[i];
         if (machine.currentState == transition.currentState && transition.readSymbol == machine.tape[machine.headPos]) {
             foundNextState = true;
