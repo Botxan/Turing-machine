@@ -1,3 +1,4 @@
+// Machine configuration
 #define MAX_TRANSITIONS 100
 #define MAX_ALPHABET_SYMBOLS 30
 #define TAPE_LENGTH 128
@@ -32,7 +33,7 @@ const int8_t b_right = 24;
 const int8_t b_enter = 25;
 const int8_t b_next_state = 26;
 
-//rgb led
+// rgb led
 int red_light_pin = 9;
 int green_light_pin = 10;
 int blue_light_pin = 11;
@@ -50,7 +51,7 @@ struct alphabet {
     int8_t size;
 };
 
-// represents a transition
+// transition representation
 struct transition {
     String currentState; // current state of the machine
     char readSymbol; // symbol that the read head has read
@@ -66,7 +67,7 @@ struct transitions {
 };
 
 /****************** CLASSES ******************/
-// represents the Turing machine
+// turing machine representation
 class Machine {
     public:
         char tape[TAPE_LENGTH];
@@ -93,9 +94,9 @@ int8_t inputCursor = 0; // cursor position in the sreen
 boolean selectSymbolMode = false; // true <=> selecting symbol. Otherwise, traversing the tape
 int8_t selectedCharIndex = 0; // cycle between alphabet
 
-long drawMillis = 0; // Millis tracker for drawing
-long buttonMillis = 0; // Millis tracker for buttons
-short interval = 500; // Interval at which update (milliseconds)
+long drawMillis = 0; // millis tracker for drawing
+long buttonMillis = 0; // millis tracker for buttons
+short interval = 500; // refresh interval (milliseconds)
 
 /**
  * Initialize the buttons, the lcd, reset the tape and build the machine
@@ -449,7 +450,8 @@ void run() {
 }
 
 /**
- * Draws the tape near the head
+ * Draws the tape depending on machine head position
+ * as well as several messages in the LCD display
  */
 void draw() {
     switch (phase) {
