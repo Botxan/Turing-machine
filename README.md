@@ -1,5 +1,5 @@
 # Turing machine
-**Universal turing machine** made with Arduino platform. Create your own turing machine files like [this ones](https://github.com/Botxan/Turing-machine/tree/main/examples) and upload them with an SD card.
+**Universal turing machine** made with Arduino platform. Create your own turing machine files like [this ones](https://github.com/Botxan/Turing-machine/tree/main/examples) and upload them with an microSD card.
 
 ---
 
