@@ -2,12 +2,21 @@
 **Universal turing machine** made with Arduino platform. Create your own turing machine files like [this ones](https://github.com/Botxan/Turing-machine/tree/main/examples) and upload them with an microSD card.
 
 ---
+<div align="center">
+  <b>Reverse word</b>
+  <br>
+  <img src="https://user-images.githubusercontent.com/33251573/182915520-d913d29a-d982-4659-9014-705f7e552d37.gif">
+ </div>
+
+---
 
 **Documentation**
 
 You can find the needed components, wiring schema and machines file structure in the [project report](https://github.com/Botxan/Turing-machine/blob/main/M%C3%A1quina%20de%20Turing%20-%20Informe%20-%20Oihan%20Irastorza.pdf).
 
 ---
+
+**Gallery**
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/33251573/170703795-49ef02ad-c41c-4dce-9424-0014203482f8.jpg" width="750"/>
